@@ -22,7 +22,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get(["/", "/api", "/api/v1", "/api/v1/"], (_req, res) => {
+app.get(["/", "/api", "/api/v1", "/api/v1/", "/healthz"], (_req, res) => {
   res.json({
     service: "rent-gateway",
     api_base: "/api/v1",
